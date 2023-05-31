@@ -1,0 +1,94 @@
+:root{
+    --primario: #F55853;
+    --primariosecundario:#D4C7A9;
+    --secundario: #A8EB8F;
+    --morado:#DDC1F7;
+    --grispastel:#B4CED4;
+    --negro:#000;
+    --blanco:#fff;
+
+
+    --fuenteprincipal:'Staatliches', cursive;
+}
+
+html {
+    font-size: 62.5%;/*1rem=10px Mantener cualquier proyecto*/
+    box-sizing: border-box;/*Mantener cualquier proyecto*/
+}
+*, *:before, *:after {/*Mantener en cualquier proyecto*/
+    box-sizing: inherit;
+}/*hack box model*/
+
+/*Globales*/
+body{
+    background-color: var(--morado);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.8rem;/*tama;o de la letra*/
+    font-family: Arial, Helvetica, sans-serif;/*cambio de formato de letra*/
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;/*quita todos los interlineados*/
+}
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--negro);
+    font-family: var(--fuenteprincipal);
+}
+h1{
+    font-size: 4rem;/*propiedad establece el tamaño del texto.*/
+}
+h2{
+    font-size: 3.2rem;/*propiedad establece el tamaño del texto.*/
+}
+h3{
+    font-size: 2.4rem;/*propiedad establece el tamaño del texto.*/
+}
+/*header*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}
+/*footer*/
+.footer{
+    background-color: var(--grispastel);
+    padding: 1rem 0;
+    margin-top: 3rem;
+
+}
+.footer__texto{
+    font-family: var(--fuenteprincipal);
+    text-align:center;
+    font-size: 2rem;
+}
+/*navegacion*/
+.navegacion{
+    background-color: var(--grispastel);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;/*centrar el contenido*/
+    gap:2rem/*separacion de elementos en la navegacion*/
+}
+.navegacion__enlace{
+    font-family: var(--fuenteprincipal);
+    color: var(--primario);
+    font-size: 2.5rem;
+
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--negro);
+}
