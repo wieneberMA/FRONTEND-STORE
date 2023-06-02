@@ -1,94 +1,235 @@
-:root{
+:root {
     --primario: #F55853;
-    --primariosecundario:#D4C7A9;
+    --primariosecundario: #D4C7A9;
     --secundario: #A8EB8F;
-    --morado:#DDC1F7;
-    --grispastel:#B4CED4;
-    --negro:#000;
-    --blanco:#fff;
+    --morado: #DDC1F7;
+    --grispastel: #B4CED4;
+    --negro: #000;
+    --blanco: #fff;
 
 
-    --fuenteprincipal:'Staatliches', cursive;
+    --fuenteprincipal: 'Staatliches', cursive;
 }
 
 html {
-    font-size: 62.5%;/*1rem=10px Mantener cualquier proyecto*/
-    box-sizing: border-box;/*Mantener cualquier proyecto*/
+    font-size: 62.5%;
+    /*1rem=10px Mantener cualquier proyecto*/
+    box-sizing: border-box;
+    /*Mantener cualquier proyecto*/
 }
-*, *:before, *:after {/*Mantener en cualquier proyecto*/
+
+*,
+*:before,
+*:after {
+    /*Mantener en cualquier proyecto*/
     box-sizing: inherit;
-}/*hack box model*/
+}
+
+/*hack box model*/
 
 /*Globales*/
-body{
+body {
     background-color: var(--morado);
     font-size: 1.6rem;
     line-height: 1.5;
 }
-p{
-    font-size: 1.8rem;/*tama;o de la letra*/
-    font-family: Arial, Helvetica, sans-serif;/*cambio de formato de letra*/
+
+p {
+    font-size: 1.8rem;
+    /*tama;o de la letra*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*cambio de formato de letra*/
     color: var(--blanco);
 }
-a{
-    text-decoration: none;/*quita todos los interlineados*/
+
+a {
+    text-decoration: none;
+    /*quita todos los interlineados*/
 }
-img{
+
+img {
     max-width: 100%;
 }
-.contenedor{
+
+.contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     text-align: center;
     color: var(--negro);
     font-family: var(--fuenteprincipal);
 }
-h1{
-    font-size: 4rem;/*propiedad establece el tamaño del texto.*/
+
+h1 {
+    font-size: 4rem;
+    /*propiedad establece el tamaño del texto.*/
 }
-h2{
-    font-size: 3.2rem;/*propiedad establece el tamaño del texto.*/
+
+h2 {
+    font-size: 3.2rem;
+    /*propiedad establece el tamaño del texto.*/
 }
-h3{
-    font-size: 2.4rem;/*propiedad establece el tamaño del texto.*/
+
+h3 {
+    font-size: 2.4rem;
+    /*propiedad establece el tamaño del texto.*/
 }
+
 /*header*/
-.header{
+.header {
     display: flex;
     justify-content: center;
 }
-.header__logo{
+
+.header__logo {
     margin: 3rem 0;
 }
+
 /*footer*/
-.footer{
+.footer {
     background-color: var(--grispastel);
     padding: 1rem 0;
     margin-top: 3rem;
 
 }
-.footer__texto{
+
+.footer__texto {
     font-family: var(--fuenteprincipal);
-    text-align:center;
+    text-align: center;
     font-size: 2rem;
 }
+
 /*navegacion*/
-.navegacion{
+.navegacion {
     background-color: var(--grispastel);
     padding: 1rem 0;
     display: flex;
-    justify-content: center;/*centrar el contenido*/
-    gap:2rem/*separacion de elementos en la navegacion*/
+    justify-content: center;
+    /*centrar el contenido*/
+    gap: 2rem
+        /*separacion de elementos en la navegacion*/
 }
-.navegacion__enlace{
+
+.navegacion__enlace {
     font-family: var(--fuenteprincipal);
     color: var(--primario);
     font-size: 2.5rem;
 
 }
+
 .navegacion__enlace--activo,
-.navegacion__enlace:hover{
+.navegacion__enlace:hover {
     color: var(--negro);
+}
+
+/*grid*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.producto {
+    background-color: var(--grispastel);
+    padding: 2rem;
+}
+
+.producto__imagen {
+    width: 100%;
+
+}
+
+.producto__nombre {
+    font-size: 4rem;
+}
+
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--primario);
+}
+
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuenteprincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 3.5rem;
+}
+
+/*graficos*/
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+
+.grafico--camisas {
+    grid-row: 2/3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8/9;
+}
+
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }
+
+}
+
+/*nosotros.html*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+@media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+}
+.nosotros__informacion {
+    justify-content: center;
+}
+.nosotros__imagen {
+    grid-row: 1/2;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2/3;
+    }
+}
+/*bloques proque comprar*/
+.comprar{
+
+}
+.contenedor{
+
+}
+.comprar__titulo{
+
+}
+.bloques{
+
+}
+.bloque{
+
 }
