@@ -6,26 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FROND-STORE</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
     <header class="header">
         <a href="index.html">
-            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <img class="header__logo" src="../img/logo.png" alt="Logotipo">
         </a>
     </header>
     <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="#">Tienda</a>
-        <a class="navegacion__enlace" href="#">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="../index.html">Tienda</a>
+        <a class="navegacion__enlace" href="../html/nosotros.html">Nosotros</a>
     </nav>
     <main class="contenedor">
-        <h1>Nuestros Productos</h1>
+        <h1>Reac js</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="../img/3.jpg" alt="imagen camisa">
+            <div class="camisa__contenido">
+                <p>
+                    Cras at eros aliquam purus posuere porta. Quisque fringilla finibus ipsum vitae semper. Mauris vitae
+                    ante id ante pretium tempor. Cras ultricies, augue at commodo commodo, orci neque convallis elit, ut
+                    scelerisque velit nunc id tortor. Vivamus quam neque, feugiat quis imperdiet ut, iaculis ac ex. In
+                    sit amet massa urna. Etiam vel pharetra tortor, aliquet porta lacus. Suspendisse faucibus mauris ac
+                    ante viverra, sed sagittis metus imperdiet.
+                </p>
+                <form class="formulario">
+                    <select class="formulario__campo" name="" id="">
+                        <option disabled selected>--- Seleccionar Talla --</option>
+                        <option value="">Chica</option>
+                        <option value="">Mediano</option>
+                        <option value="">Grande</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__sumit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <p class="footer__texto">
